@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>QR Code generator</title>
+<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet"> 
+
+<style>
+body {font-family: 'Rajdhani', sans-serif;}
+</style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+function generateBarCode() 
+{
+    var nric = $('#text').val();
+    var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+    $('#barcode').attr('src', url);
+}
+</script>
+
+</head>
+
+<body>
+
+
+
+<center><h2>QR Code Generator</h2></center>
+<center> 
+<input id="text" type="text" value="Insert URL" style="Width:30%"/ onblur='generateBarCode();'>
+<br><br>
+<a href="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" download>
+ <img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" alt="" title="Hello :)" width="200" height="200" /> </center> </a>
+  
+  <br>
+   
+  <center><h4><b><h3>To download the QR code, use your browser to screenshot (or PrtSc on your keyboard and paste it)</h3><br>Computer: Press Tab or somewhere random on the page<br>Mobile: click somewhere random on the page.</b></h4></center>
+
+<br> <br> <br>
+<center>
+<img src="https://scontent.fams1-2.fna.fbcdn.net/v/t1.0-9/87520791_536596690189820_8441819303312883712_n.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_ohc=llgvZRj-teAAX_eaBeG&_nc_ht=scontent.fams1-2.fna&oh=652a7742896fa4a1734ca882737306de&oe=5E907999" alt="Finn PrOOduction" width="400px" /> </center>
+
+
+
+</body>
+  </html>
